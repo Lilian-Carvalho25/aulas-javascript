@@ -18,6 +18,7 @@ console.log("-----------------");
 let preco = 1000;
 let desconto = 50;
 let valorFinal = preco - desconto;
+/* Basicamente isso aqui serve pra você não ter que colocar esssas configurações em cada um, pode ser usado de modo utilitário. */
 let configuracoes =  {
     style: "currency",
     currency: "BRL"
