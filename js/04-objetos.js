@@ -65,3 +65,20 @@ let livros = [
 
 console.log(livros[1].titulo); //O Hobbit
 console.log(livros[0].autor); //Nick Mason
+
+// Exercício
+
+let pedido = {
+    codigo: "34fj3",
+    produtos: ["Carro", "Casa", "Celular"],
+    data: "06/04/2023",
+    preco: 5000,
+    prazo: 20
+}
+
+let configuracoes =  {
+    style: "currency",
+    currency: "BRL"
+};
+
+console.log(`Referente ao pedido ${pedido.codigo} os produtos foram comprados em ${pedido.data} custando ${pedido.preco.toLocaleString("pt-br", configuracoes)}. O prazo de entrega é de ${pedido.prazo} dias úteis.`);
