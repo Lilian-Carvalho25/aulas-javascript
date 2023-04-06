@@ -62,7 +62,7 @@ if (media >= mediaMinima && faltas < limiteDeFaltas) {
 let desempenho; //começa indefinida
 
 /* O else if significa "senão se" ou seja, se a nota não for dessa maneira, será dessa. */
-if(media < 3){
+if (media < 3) {
     desempenho = "PÉSSIMO";
 } else if (media < 5) {
     desempenho = "RUIM";
@@ -94,6 +94,41 @@ let resultado = idade >= 18 ? "maior" : "menor";
 console.log(`A pessoa é ${resultado} de idade`);
 
 console.log("-------------------------------------------------------");
+
+
+/* switch/case/break/default */
+/* Algoritmo de um chatbot 
+- Se digitar 1: Pedir informações
+- Se digitar 2: Abrir uma reclamação
+- Se digitar 3: Fazer um elogio
+- Se digitar 4: Falar com um atendente humano*/
+
+
+// prompt faz a janelinha aparecer
+// parseInt() faz com que o js entenda os números como números inteiros
+let opcao = parseInt( prompt("Digite 1, 2 ou 3") );
+let mensagem;
+
+/* switvh opcao -> "analise opcao"
+case -> caso for 1 -> mensagem
+*/
+switch (opcao) {
+    case 1: mensagem = "Ok, o que quer saber?";
+        break;
+
+    case 2: mensagem = "Poxa, que pena. O que houve?";
+        break;
+
+    case 3: mensagem = "Bacana! Conte-me :)";
+        break;
+
+    default:
+        mensagem = "Não entendi :( vou chamar alguém!";
+        break;
+}
+
+console.log(`Opção escolhida: ${opcao}`);
+console.log(mensagem);
 
 
 
