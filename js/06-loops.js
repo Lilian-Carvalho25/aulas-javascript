@@ -2,7 +2,7 @@
 de repetição) 
 
 Tradicionais: while, do/while, for
-Específicos: for/of, for/in */
+Específicos: for/of, for/in (objetos) */
 
 // Exemplo 1: while (enquanto)
 // Este loop SOMENTE funcionará se
@@ -44,6 +44,37 @@ const alunos = [
 // Guardando o tamanho/comprimento do array
 let quantidade = alunos.length; 
 
+console.log("-- Resultado usando for --");
 for( let i = 0; i < quantidade; i++ ){
     console.log(`Nome: ${alunos[i]}`);
 }
+
+console.log("--------------------------------");
+console.log("-- Resultado usando for (para) /of (de/do) --");
+
+/*for/of é uma sintaxe exclusiva (e mais simples) para manipulação de dados de um array */
+for(let aluno of alunos){
+    console.log(`Nome: ${aluno}`);
+}
+
+console.log("-----------------------------------");
+
+/* for/in: sintaxe exclusiva para manipulação de dados de um objeto */
+
+let pessoa = {
+    nome: "Jon Oliva",
+    idade: 66,
+    cidade: "São Paulo"
+};
+
+for(let dados in pessoa){
+
+    //Exibe somente o nome das propriedades.
+    console.log(dados);
+
+    console.log(pessoa[dados]);
+    console.log(
+        `${dados}: ${pessoa[dados]}`
+    );
+}
+
