@@ -3,16 +3,29 @@ let numeroAleatorio = parseInt( Math.random() * 11 );
 console.log(numeroAleatorio);
 
 const formulario = document.querySelector("form");
-const palpite = document.querySelector("#palpite");
+const campoPalpite = document.querySelector("#palpite");
+const divResultado = document.querySelector("#resultado");
 
 formulario.addEventListener ("submit", function(event){
     event.preventDefault();
 
-    let palpite = parseFloat(palpite.value);
+    let palpite = (campoPalpite.value);
+
+    let resultado;
 
     if (numeroAleatorio == palpite) {
-        console.log("Acertouuuuu");
+        resultado = "Acertooooou!";
+        resultado.style.color = "blue";
     } else {
-        console.log("Errouuuuuu");
+        resultado = "Errouuuuuu";
+        resultado.style.color = "red";
     }
+
+    let h2 = document.createElement("h2");
+    
+    h2.innerHTML = `${resultado}`;
+
+    divResultado.appendChild(h2);
+
+    campoPalpite.focus();
 });
