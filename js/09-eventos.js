@@ -45,4 +45,3 @@ botao.addEventListener("click", function(){
         botao.textContent = "Ativar";
     }
 });
-
