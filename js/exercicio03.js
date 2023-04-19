@@ -5,25 +5,25 @@ console.log(numeroAleatorio);
 const formulario = document.querySelector("form");
 const campoPalpite = document.querySelector("#palpite");
 const divResultado = document.querySelector("#resultado");
+let h2 = document.createElement("h2");
 
 formulario.addEventListener ("submit", function(event){
     event.preventDefault();
 
     let palpite = (campoPalpite.value);
 
-    let resultado;
+    let resultado, cor;
 
     if (numeroAleatorio == palpite) {
-        resultado = "Acertooooou!";
-        resultado.style.color = "blue";
+        resultado = "Parabéns, você acertou!";
+        cor = "blue";
     } else {
-        resultado = "Errouuuuuu";
-        resultado.style.color = "red";
-    }
-
-    let h2 = document.createElement("h2");
+        resultado ="Você errou, tente novamente :(";
+        cor = "red";
+    };
     
     h2.innerHTML = `${resultado}`;
+    h2.style.color = cor;
 
     divResultado.appendChild(h2);
 
