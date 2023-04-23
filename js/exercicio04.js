@@ -56,7 +56,22 @@ botao2.addEventListener("click", function(){
 
 });
 
+// botao3.addEventListener("click", function(){
+//     tema.classList.toggle("tema-roxo");
+
+//     p.innerHTML = `O roxo está ligado às profundezas da mente.`;
+//     pOrange.appendChild(p);
+//     pOrange.style.color = "white";
+// });
+
 botao3.addEventListener("click", function(){
+    if (tema.classList.toggle("tema-verde")) {
+        tema.classList.remove("tema-verde");
+    }
+
+    if (tema.classList.toggle("tema-azul")) {
+        tema.classList.remove("tema-azul");
+    }
     tema.classList.toggle("tema-roxo");
 
     p.innerHTML = `O roxo está ligado às profundezas da mente.`;
