@@ -78,3 +78,5 @@ botao3.addEventListener("click", function(){
     pOrange.appendChild(p);
     pOrange.style.color = "white";
 });
+
+// Nesse caso o contains seria mais adequado.

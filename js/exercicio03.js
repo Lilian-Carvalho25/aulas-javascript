@@ -10,15 +10,19 @@ let h2 = document.createElement("h2");
 formulario.addEventListener ("submit", function(event){
     event.preventDefault();
 
-    let palpite = (campoPalpite.value);
+    let palpite = parseInt(campoPalpite.value);
 
     let resultado, cor;
 
     if (numeroAleatorio == palpite) {
-        resultado = "Parabéns, você acertou!";
+        resultado = "Parabéns, você acertou! 😄";
         cor = "blue";
+    //Se o valor for menor que zero ou maior que 10. || significa "ou".
+    } else if(palpite < 0 || palpite > 10){
+        resultado = "Por favor, insira valores entre 0 e 10. 😬"
+        cor = "blueviolet"
     } else {
-        resultado ="Você errou, tente novamente :(";
+        resultado ="Você errou, tente novamente. 😔";
         cor = "red";
     };
     
