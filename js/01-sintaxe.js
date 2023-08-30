@@ -45,4 +45,17 @@
         /* 2 (tradicional) = Concatenação */
         console.log("Olá! me chamo "+nome+"e estou fazendo curso de "+curso+" no "+escola);
 
-        
+        console.log("------------------------------------");
+
+       //  Exercício Origamid
+       var nome2 = "Lilian Carvalho";
+       const minhaIdade = 18;
+       var comidaFavorita;
+       comidaFavorita = "Cookies";
+       let semValor1 = "Alguma coisa", 
+            semValor2, 
+            semValor3,
+            semValor4, 
+            semValor5;
+
+       console.log(nome2, minhaIdade, comidaFavorita, semValor1);
